@@ -6,6 +6,7 @@
   --cor03:#F0D3B4;
   --cor04:#5A90A3;
   --cor05:#B4E0F0;
+  --cor06: rgba(255, 255, 255, 0.534);
 
   --botao-circle: rgba(0,0,0,0.025);
   --botao-bordercard: rgba(255, 255, 255, 0.25);
@@ -30,9 +31,9 @@ header {
   max-width: 600px;
   max-height: 250px;
   margin: auto;
-  padding: 15px;
+  padding: 10px;
   border-radius: 20px;
-  background-color: white;
+  /* background-color: white; */
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -47,7 +48,7 @@ header {
   columns:  2 auto;
   text-align: center;
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--cor06);
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425); */
 }
 article > picture > img {
@@ -91,7 +92,7 @@ article > nav > a:hover {
   text-align: center;
   text-align: justify;
   margin: auto;
-  background-color: rgba(143, 70, 211, 0.137);
+  background-color: var(--cor06);
   min-width: 100px;
   max-width: 500px;
   max-height: 550px;
@@ -347,4 +348,13 @@ section .options .option .label .info .main {
 }
 section .options .option .label .info .sub {
   transition-delay: 0.1s;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+footer .animation {
+  color: red;
 }
