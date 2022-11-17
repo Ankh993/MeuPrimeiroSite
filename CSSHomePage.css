@@ -7,6 +7,11 @@
   --cor04:#5A90A3;
   --cor05:#B4E0F0;
 
+  --botao-circle: rgba(0,0,0,0.025);
+  --botao-bordercard: rgba(255, 255, 255, 0.25);
+  --botao-text: #353436d8;
+  --botao-sombra: rgba(0, 0, 0, 0.178);
+
   --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
 }
 
@@ -86,13 +91,38 @@ article > nav > a:hover {
   text-align: center;
   text-align: justify;
   margin: auto;
-  background-color: rgba(99, 78, 119, 0.137);
+  background-color: rgba(143, 70, 211, 0.137);
   min-width: 100px;
   max-width: 500px;
   max-height: 550px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+article div.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+article .redes img {
+  min-width: 50px;
+  max-width: 50px;
+  border: 20px;
+  padding: 15px;
+  margin: 10px;  
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.082);
+  background-color: white;
+  color: var(--defaultBackground);
+}
+article.links > p {
+  font-size: 1.5em;
+  font-family: sans-serif;
 }
 /* Quadrados */
-aside {  
+/* aside {  
   margin: auto;
   min-width: 100px;
   max-width: 800px;
@@ -120,4 +150,200 @@ aside > img {
   transition-duration: 1.5s;
   background-color: var(--cor04);
   color: var(--cor5);
- }
+ } */
+
+/* configurações dos cartões */
+
+section  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.25s;
+}
+section .dark {
+  background: #212123;
+  color: white;
+}
+@media (prefers-color-scheme: dark) {
+  section:not(.light) {
+    background: #212123;
+    color: white;
+  }
+}
+section .credit {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: inherit;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 400px;
+  max-width: 600px;
+  width: calc(100% - 100px);
+  height: 400px;
+}
+@media screen and (max-width: 718px) {
+  section .options {
+    min-width: 520px;
+  }
+  section .options .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+  section .options {
+    min-width: 440px;
+  }
+  section .options .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+  section .options {
+    min-width: 360px;
+  }
+  section .options .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  section .options {
+    min-width: 280px;
+  }
+  section .options .option:nth-child(2) {
+    display: none;
+  }
+}
+section .options .option {
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  background: var(--defaultBackground, var(--defaultBackground, #e6e9ed));
+  background-repeat: auto 120%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+section .options .option:nth-child(1) {
+  --defaultBackground: #ed5565;
+}
+section .options .option:nth-child(2) {
+  --defaultBackground: #fc6e51;
+}
+section .options .option:nth-child(3) {
+  --defaultBackground: #ffce54;
+}
+section .options .option:nth-child(4) {
+  --defaultBackground: #2ecc71;
+}
+section .options .option:nth-child(5) {
+  --defaultBackground: #5d9cec;
+}
+section .options .option:nth-child(6) {
+  --defaultBackground: #ac92ec;
+}
+section .options .active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 600px;
+  margin: 0px;
+  border-radius: 40px;
+  background-size: auto 100%;
+}
+section .options .active .shadow {
+  box-shadow: inset 0 -120px 120px -120px black,
+    inset 0 -120px 120px -100px black;
+}
+section .options .active .label {
+  bottom: 20px;
+  left: 20px;
+}
+section .options .active .label .info > div {
+  left: 0px;
+  opacity: 1;
+}
+section .options .option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+section .options .option:not(.active) .shadow {
+  bottom: -40px;
+  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+section .options .option:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+}
+section .options .option:not(.active) .label .info > div {
+  left: 20px;
+  opacity: 0;
+}
+section .options .option .shadow {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+section .options .option .label {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  height: 40px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+section .options .option .label .icone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+}
+section .options .option .label .icone img {
+  min-width: 20px;
+  max-width: 20px;
+}
+section .options .option .label .icone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #212123;
+  color: var(--defaultBackground);
+}
+section .options .option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: white;
+  white-space: pre;
+}
+section .options .option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+section .options .option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+section .options .option .label .info .sub {
+  transition-delay: 0.1s;
+}
