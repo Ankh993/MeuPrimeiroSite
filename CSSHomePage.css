@@ -42,6 +42,19 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+header > h1 {
+  text-align: center;
+  font-family: var(--fonte-titulos);
+  color: var(--cor04);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.322);;
+  margin-top: 20px;
+  background-color: var(--cor06);
+  border-radius: 50px;
+  height: 50px;
+  width: 350px;
+  margin: auto;
+
+}
 header > img {
   display: block;
   margin: auto;
@@ -210,33 +223,25 @@ section .credit {
   section .options {
     min-width: 520px;
   }
-  section .options .option:nth-child(5) {
-    display: none;
-  }
+  
 }
 @media screen and (max-width: 638px) {
   section .options {
     min-width: 440px;
   }
-  section .options .option:nth-child(4) {
-    display: none;
-  }
+  
 }
 @media screen and (max-width: 558px) {
   section .options {
     min-width: 360px;
   }
-  section .options .option:nth-child(3) {
-    display: none;
-  }
+ 
 }
 @media screen and (max-width: 478px) {
   section .options {
-    min-width: 280px;
+    min-width: 180px;
   }
-  section .options .option:nth-child(2) {
-    display: none;
-  }
+ 
 }
 /* altera os cubos */
 section .options .option {
@@ -244,8 +249,8 @@ section .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
-  background: var(--defaultBackground, var(--defaultBackground, #e6e9ed));
-  background-repeat: auto 120%;
+  background: var(--optionBackground, var(--defaultBackground));
+  background-repeat: auto 100%;
   background-position: center;
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
@@ -333,8 +338,9 @@ section .options .option .label .icone {
   color: var(--defaultBackground);
 }
 section .options .option .label .icone img {
-  min-width: 20px;
-  max-width: 20px;
+  min-width: 40px;
+  max-width: 40px;
+  border-radius: 100%;
 }
 section .options .option .label .icone {
   display: flex;
