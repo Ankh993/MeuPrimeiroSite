@@ -25,13 +25,10 @@
 }
 
 body {
-  background-color: var(--cor02);
   font-family: var(--fonte-padrao);
-  background-image: url(Imagens/background1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  
+  height: 100vh;
+  background: url(Imagens/background1.jpg) center no-repeat fixed;
+  background-size: cover;
 }
 /* Cabeçalho */
 header {
