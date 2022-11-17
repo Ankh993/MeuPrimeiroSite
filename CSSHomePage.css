@@ -71,7 +71,7 @@ article > h1 {
 article > p {
   text-align: justify;
   text-align: center; 
-  min-width: 100px;
+  min-width: 50px;
   padding: 10px;
   margin-left: 15px;
   text-shadow: 2px 5px 2px rgba(0, 0, 0, 0.048);
@@ -161,6 +161,7 @@ section  {
   align-items: center;
   overflow: hidden;
   transition: 0.25s;
+   
 }
 section .dark {
   background: #212123;
