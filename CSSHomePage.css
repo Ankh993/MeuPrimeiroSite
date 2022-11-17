@@ -27,7 +27,7 @@ body {
 /* Cabeçalho */
 header {
   min-width: 300px;
-  max-width: 800px;
+  max-width: 600px;
   max-height: 250px;
   margin: auto;
   padding: 15px;
@@ -39,7 +39,7 @@ header {
 /* Primeiro Artigo */
 .coluna {
   min-width: 300px;
-  max-width: 800px;
+  max-width: 600px;
   max-height: 350px;
   margin: auto;
   margin-bottom: 30px;
